@@ -6,6 +6,10 @@
   <title>Iman Hospital – Quality Healthcare in Hassan</title>
   <style>
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -19,6 +23,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
@@ -261,15 +268,128 @@
       font-size: 13px;
       font-weight: 600;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .doc-btn:hover {
       background: #144d76;
     }
 
-    .chatbot-section {
+    .booking {
       padding: 70px 40px;
       background: #ffffff;
+      text-align: center;
+    }
+
+    .booking h2 {
+      font-size: 28px;
+      color: #0f2d45;
+      margin-bottom: 8px;
+    }
+
+    .booking-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f7fbff;
+      border-radius: 14px;
+      padding: 36px;
+      border: 1px solid #d1e8f5;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f2d45;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px 14px;
+      border: 1px solid #d1e8f5;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #0f2d45;
+      outline: none;
+      background: #ffffff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #1a5c8a;
+    }
+
+    .submit-btn {
+      background: #1a5c8a;
+      color: #ffffff;
+      border: none;
+      padding: 13px 36px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: #144d76;
+    }
+
+    .booking-success {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f7fbff;
+      border-radius: 14px;
+      padding: 50px 36px;
+      border: 1px solid #d1e8f5;
+      text-align: center;
+    }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background: #e1f5ee;
+      color: #0f6e56;
+      font-size: 28px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .booking-success h3 {
+      font-size: 22px;
+      color: #0f2d45;
+      margin-bottom: 10px;
+    }
+
+    .booking-success p {
+      font-size: 14px;
+      color: #6080a0;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .chatbot-section {
+      padding: 70px 40px;
+      background: #f0f8ff;
       text-align: center;
     }
 
@@ -279,12 +399,86 @@
       margin-bottom: 8px;
     }
 
-    .chatbot-wrapper {
-      max-width: 900px;
+    .chat-box {
+      max-width: 700px;
       margin: 0 auto;
+      border: 1px solid #d1e8f5;
       border-radius: 14px;
       overflow: hidden;
+      background: #ffffff;
+    }
+
+    .chat-messages {
+      height: 380px;
+      overflow-y: auto;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: #f7fbff;
+    }
+
+    .chat-msg {
+      display: flex;
+    }
+
+    .chat-msg.bot {
+      justify-content: flex-start;
+    }
+
+    .chat-msg.user {
+      justify-content: flex-end;
+    }
+
+    .msg-bubble {
+      max-width: 75%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .chat-msg.bot .msg-bubble {
+      background: #ffffff;
+      color: #0f2d45;
       border: 1px solid #d1e8f5;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-msg.user .msg-bubble {
+      background: #1a5c8a;
+      color: #ffffff;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-input-row {
+      display: flex;
+      border-top: 1px solid #d1e8f5;
+      background: #ffffff;
+    }
+
+    .chat-input-row input {
+      flex: 1;
+      padding: 14px 18px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #0f2d45;
+      background: transparent;
+    }
+
+    .chat-input-row button {
+      background: #1a5c8a;
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chat-input-row button:hover {
+      background: #144d76;
     }
 
     footer {
@@ -346,118 +540,7 @@
       font-size: 12px;
       color: #4a7090;
     }
-.booking {
-  padding: 70px 40px;
-  background: #f0f8ff;
-  text-align: center;
-}
 
-.booking h2 {
-  font-size: 28px;
-  color: #0f2d45;
-  margin-bottom: 8px;
-}
-
-.booking-form {
-  max-width: 700px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 36px;
-  border: 1px solid #d1e8f5;
-  text-align: left;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #0f2d45;
-}
-
-.form-group input,
-.form-group select {
-  padding: 10px 14px;
-  border: 1px solid #d1e8f5;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #0f2d45;
-  outline: none;
-  background: #f7fbff;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  border-color: #1a5c8a;
-  background: #ffffff;
-}
-
-.submit-btn {
-  background: #1a5c8a;
-  color: #ffffff;
-  border: none;
-  padding: 13px 36px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.submit-btn:hover {
-  background: #144d76;
-}
-
-.booking-success {
-  display: none;
-  max-width: 700px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 50px 36px;
-  border: 1px solid #d1e8f5;
-  text-align: center;
-}
-
-.success-icon {
-  width: 64px;
-  height: 64px;
-  background: #e1f5ee;
-  color: #0f6e56;
-  font-size: 28px;
-  font-weight: 700;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.booking-success h3 {
-  font-size: 22px;
-  color: #0f2d45;
-  margin-bottom: 10px;
-}
-
-.booking-success p {
-  font-size: 14px;
-  color: #6080a0;
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
   </style>
 </head>
 <body>
@@ -465,17 +548,16 @@
   <nav>
     <div class="logo">Iman <span>Hospital</span></div>
     <div class="nav-links">
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#doctors">Doctors</a>
+      <a href="#booking">Book Appointment</a>
       <a href="#chat">Chat With Us</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#" class="nav-btn">Book Appointment</a>
+      <a href="#booking" class="nav-btn">Book Appointment</a>
     </div>
   </nav>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-text">
       <h1>Quality Healthcare <span>You Can Trust</span></h1>
       <p>Iman Hospital, Hassan – providing compassionate, expert medical care for you and your family.</p>
@@ -559,7 +641,7 @@
         <p class="spec">General Medicine</p>
         <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
         <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="nav-btn">Book Appointment</a>
+        <a href="#booking" class="doc-btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">NF</div>
@@ -567,7 +649,7 @@
         <p class="spec">Gynaecology</p>
         <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
         <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="nav-btn">Book Appointment</a>
+        <a href="#booking" class="doc-btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">AK</div>
@@ -575,7 +657,7 @@
         <p class="spec">Orthopedics</p>
         <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
         <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="nav-btn">Book Appointment</a>
+        <a href="#booking" class="doc-btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">SF</div>
@@ -583,126 +665,114 @@
         <p class="spec">Dermatology</p>
         <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
         <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="nav-btn">Book Appointment</a>
+        <a href="#booking" class="doc-btn">Book Appointment</a>
       </div>
     </div>
   </section>
-<section class="booking" id="booking">
-  <h2>Book an Appointment</h2>
-  <p class="sub">Fill in the form below and we will confirm your appointment</p>
 
-  <div class="booking-form" id="bookingForm">
+  <section class="booking" id="booking">
+    <h2>Book an Appointment</h2>
+    <p class="sub">Fill in the form below and we will confirm your appointment</p>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label>Patient Name</label>
-        <input type="text" id="patientName" placeholder="Enter your full name" />
+    <div class="booking-form" id="bookingForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Patient Name</label>
+          <input type="text" id="patientName" placeholder="Enter your full name" />
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="patientAge" placeholder="Your age" min="1" max="120" />
+        </div>
       </div>
-      <div class="form-group">
-        <label>Age</label>
-        <input type="number" id="patientAge" placeholder="Your age" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Choose Doctor</label>
+          <select id="doctor">
+            <option value="">Select a doctor</option>
+            <option value="Dr. Syed Mudassir">Dr. Syed Mudassir – General Medicine</option>
+            <option value="Dr. Nisar Fathima">Dr. Nisar Fathima – Gynaecology</option>
+            <option value="Dr. Ahmed Khan">Dr. Ahmed Khan – Orthopedics</option>
+            <option value="Dr. Sana Fatima">Dr. Sana Fatima – Dermatology</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Choose Service</label>
+          <select id="service">
+            <option value="">Select a service</option>
+            <option value="General Consultation">General Consultation</option>
+            <option value="Fever Treatment">Fever Treatment</option>
+            <option value="Cold and Cough Treatment">Cold and Cough Treatment</option>
+            <option value="Blood Pressure Checkup">Blood Pressure Checkup</option>
+            <option value="Diabetes Consultation">Diabetes Consultation</option>
+            <option value="Heart Checkup">Heart Checkup</option>
+            <option value="Skin Consultation">Skin Consultation</option>
+            <option value="Eye Checkup">Eye Checkup</option>
+            <option value="Lab Tests">Lab Tests</option>
+            <option value="ECG">ECG</option>
+            <option value="Orthopedic Consultation">Orthopedic Consultation</option>
+          </select>
+        </div>
       </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" id="apptDate" />
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <input type="time" id="apptTime" min="10:00" max="17:00" />
+        </div>
+      </div>
+      <button class="submit-btn" id="confirmBtn">Confirm Appointment</button>
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label>Choose Doctor</label>
-        <select id="doctor">
-          <option value="">Select a doctor</option>
-          <option>Dr. Syed Mudassir – General Medicine</option>
-          <option>Dr. Nisar Fathima – Gynaecology</option>
-          <option>Dr. Ahmed Khan – Orthopedics</option>
-          <option>Dr. Sana Fatima – Dermatology</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Choose Service</label>
-        <select id="service">
-          <option value="">Select a service</option>
-          <option>General Consultation</option>
-          <option>Fever Treatment</option>
-          <option>Cold and Cough Treatment</option>
-          <option>Blood Pressure Checkup</option>
-          <option>Diabetes Consultation</option>
-          <option>Heart Checkup</option>
-          <option>Skin Consultation</option>
-          <option>Eye Checkup</option>
-          <option>Lab Tests</option>
-          <option>ECG</option>
-          <option>Orthopedic Consultation</option>
-        </select>
-      </div>
+    <div class="booking-success" id="bookingSuccess">
+      <div class="success-icon">&#x2713;</div>
+      <h3>Appointment Confirmed!</h3>
+      <p id="successMessage"></p>
+      <button class="submit-btn" id="resetBtn">Book Another Appointment</button>
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label>Preferred Date</label>
-        <input type="date" id="apptDate" />
+  </section>
+
+  <section class="chatbot-section" id="chat">
+    <h2>Chat With Us</h2>
+    <p class="sub">Ask about doctors, services, timings or book an appointment</p>
+    <div class="chat-box">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot">
+          <div class="msg-bubble">Hello! Welcome to Iman Hospital. How may I help you today?</div>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Preferred Time</label>
-        <input type="time" id="apptTime" min="10:00" max="17:00" />
-      </div>
-    </div>
-
-    <button class="submit-btn" onclick="submitBooking()">Confirm Appointment</button>
-
-  </div>
-
-  <div class="booking-success" id="bookingSuccess">
-    <div class="success-icon">&#x2713;</div>
-    <h3>Appointment Confirmed!</h3>
-    <p id="successMessage"></p>
-    <button class="submit-btn" onclick="resetForm()">Book Another Appointment</button>
-  </div>
-
-</section>
-<section class="chatbot-section" id="chat">
-  <h2>Chat With Us</h2>
-  <p class="sub">Ask about doctors, services, timings or book an appointment</p>
-
-  <div class="chat-box">
-
-    <div class="chat-messages" id="chatMessages">
-      <div class="chat-msg bot">
-        <div class="msg-bubble">Hello! Welcome to Iman Hospital. How may I help you?</div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Type your question here..." />
+        <button id="sendBtn">Send</button>
       </div>
     </div>
-
-    <div class="chat-input-row">
-      <input
-        type="text"
-        id="chatInput"
-        placeholder="Type your question here..."
-        onkeydown="if(event.key==='Enter') sendMessage()"
-      />
-      <button onclick="sendMessage()">Send</button>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-logo">Iman <span>Hospital</span></div>
-        <p>Providing compassionate, quality healthcare to Hassan and surrounding areas since day one.</p>
+        <p>Providing compassionate, quality healthcare to Hassan and surrounding areas.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Doctors</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#booking">Book Appointment</a>
+        <a href="#chat">Chat With Us</a>
       </div>
       <div class="footer-col">
         <h4>Our Services</h4>
-        <a href="#">General Consultation</a>
-        <a href="#">Diabetes Care</a>
-        <a href="#">Blood Pressure</a>
-        <a href="#">Lab Tests</a>
-        <a href="#">ECG</a>
+        <a href="#services">General Consultation</a>
+        <a href="#services">Diabetes Care</a>
+        <a href="#services">Blood Pressure</a>
+        <a href="#services">Lab Tests</a>
+        <a href="#services">ECG</a>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
@@ -716,6 +786,140 @@
       <p>© 2025 Iman Hospital, Hassan. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+
+    // ── CHATBOT ──────────────────────────────────────────
+
+    function getResponse(question) {
+      var q = question.toLowerCase().trim();
+      if (q === "hi" || q === "hello" || q === "hey" || q === "hii") {
+        return "Hello! Welcome to Iman Hospital. How may I help you?";
+      } else if (q.includes("timing") || q.includes("open") || q.includes("hours") || q.includes("time")) {
+        return "OPD Timings: 10 AM to 5 PM, Monday to Saturday.";
+      } else if (q.includes("fee") || q.includes("cost") || q.includes("price") || q.includes("charge")) {
+        return "Consultation Fee: Rs. 300 per visit.";
+      } else if (q.includes("doctor")) {
+        return "Our doctors: Dr. Syed Mudassir (General Medicine), Dr. Nisar Fathima (Gynaecology), Dr. Ahmed Khan (Orthopedics), Dr. Sana Fatima (Dermatology).";
+      } else if (q.includes("service") || q.includes("treatment")) {
+        return "We offer: General Consultation, Fever Treatment, Cold & Cough, Blood Pressure, Diabetes Care, Heart Checkup, Lab Tests, ECG, Eye Checkup, Orthopedics and more.";
+      } else if (q.includes("appointment") || q.includes("book")) {
+        return "To book an appointment please scroll up to the Book Appointment section or click Book Appointment in the menu.";
+      } else if (q.includes("fever") || q.includes("cold") || q.includes("cough")) {
+        return "Recommended: General Medicine with Dr. Syed Mudassir. OPD: 10 AM – 5 PM.";
+      } else if (q.includes("skin") || q.includes("rash") || q.includes("itching")) {
+        return "Recommended: Dermatology with Dr. Sana Fatima.";
+      } else if (q.includes("eye") || q.includes("vision")) {
+        return "Recommended: Eye Care. We offer complete vision and eye health screening.";
+      } else if (q.includes("ear") || q.includes("nose") || q.includes("throat")) {
+        return "Recommended: ENT Consultation. Please visit during OPD hours.";
+      } else if (q.includes("back pain") || q.includes("knee") || q.includes("joint") || q.includes("bone")) {
+        return "Recommended: Orthopedics with Dr. Ahmed Khan.";
+      } else if (q.includes("chest pain") || q.includes("heart attack")) {
+        return "URGENT: Please visit our Emergency Room immediately or call emergency services right away.";
+      } else if (q.includes("heart")) {
+        return "Recommended: Heart Checkup. Please visit during OPD hours: 10 AM – 5 PM.";
+      } else if (q.includes("diabetes") || q.includes("sugar")) {
+        return "Recommended: Diabetes Clinic with Dr. Syed Mudassir.";
+      } else if (q.includes("bp") || q.includes("blood pressure") || q.includes("pressure")) {
+        return "Recommended: Blood Pressure Clinic. We offer monitoring and management.";
+      } else if (q.includes("pregnancy") || q.includes("gynae") || q.includes("period")) {
+        return "Recommended: Gynaecology with Dr. Nisar Fathima.";
+      } else if (q.includes("child") || q.includes("baby") || q.includes("kid")) {
+        return "Recommended: Paediatrics. Please visit during OPD hours: 10 AM – 5 PM.";
+      } else if (q.includes("location") || q.includes("address") || q.includes("where")) {
+        return "Iman Hospital is located in Hassan, Karnataka, India.";
+      } else if (q.includes("lab") || q.includes("test") || q.includes("blood test")) {
+        return "We offer a full range of lab and diagnostic tests. OPD hours: 10 AM – 5 PM.";
+      } else if (q.includes("ecg")) {
+        return "We offer ECG services. Please visit during OPD hours: 10 AM – 5 PM.";
+      } else if (q.includes("xray") || q.includes("x-ray") || q.includes("x ray")) {
+        return "We offer X-Ray services. Please visit during OPD hours: 10 AM – 5 PM.";
+      } else {
+        return "I am not sure about that. Please ask about our doctors, timings, fees, services or appointments — or visit us at Hassan during OPD hours: 10 AM – 5 PM.";
+      }
+    }
+
+    function addMessage(text, sender) {
+      var messages = document.getElementById("chatMessages");
+      var msg = document.createElement("div");
+      msg.className = "chat-msg " + sender;
+      msg.innerHTML = '<div class="msg-bubble">' + text + '</div>';
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function sendMessage() {
+      var input = document.getElementById("chatInput");
+      var question = input.value.trim();
+      if (question === "") return;
+      addMessage(question, "user");
+      input.value = "";
+      setTimeout(function () {
+        addMessage(getResponse(question), "bot");
+      }, 400);
+    }
+
+    document.getElementById("sendBtn").addEventListener("click", function () {
+      sendMessage();
+    });
+
+    document.getElementById("chatInput").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        sendMessage();
+      }
+    });
+
+    // ── BOOKING ──────────────────────────────────────────
+
+    document.getElementById("confirmBtn").addEventListener("click", function () {
+      var name = document.getElementById("patientName").value.trim();
+      var age = document.getElementById("patientAge").value.trim();
+      var doctor = document.getElementById("doctor").value;
+      var service = document.getElementById("service").value;
+      var date = document.getElementById("apptDate").value;
+      var time = document.getElementById("apptTime").value;
+
+      if (!name || !age || !doctor || !service || !date || !time) {
+        alert("Please fill in all fields before confirming your appointment.");
+        return;
+      }
+
+      var dateObj = new Date(date + "T00:00:00");
+      var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+      var formattedDate = dateObj.toLocaleDateString("en-IN", options);
+
+      var timeParts = time.split(":");
+      var hours = parseInt(timeParts[0]);
+      var minutes = timeParts[1];
+      var ampm = hours >= 12 ? "PM" : "AM";
+      var displayHour = hours % 12 || 12;
+      var formattedTime = displayHour + ":" + minutes + " " + ampm;
+
+      document.getElementById("successMessage").innerHTML =
+        "Thank you, <strong>" + name + "</strong>! Your appointment has been confirmed.<br><br>" +
+        "<strong>Doctor:</strong> " + doctor + "<br>" +
+        "<strong>Service:</strong> " + service + "<br>" +
+        "<strong>Date:</strong> " + formattedDate + "<br>" +
+        "<strong>Time:</strong> " + formattedTime + "<br><br>" +
+        "Please arrive 10 minutes early. We look forward to seeing you!";
+
+      document.getElementById("bookingForm").style.display = "none";
+      document.getElementById("bookingSuccess").style.display = "block";
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      document.getElementById("patientName").value = "";
+      document.getElementById("patientAge").value = "";
+      document.getElementById("doctor").value = "";
+      document.getElementById("service").value = "";
+      document.getElementById("apptDate").value = "";
+      document.getElementById("apptTime").value = "";
+      document.getElementById("bookingForm").style.display = "block";
+      document.getElementById("bookingSuccess").style.display = "none";
+    });
+
+  </script>
 
 </body>
 </html>
