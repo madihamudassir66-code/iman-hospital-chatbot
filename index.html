@@ -476,19 +476,30 @@
     </div>
   </section>
 
-  <section class="chatbot-section">
-    <h2>Chat With Us</h2>
-    <p class="sub">Ask about doctors, services, timings or book an appointment</p>
-    <div class="chatbot-wrapper">
-      <iframe
-        src="https://imanhospitalhassan.netlify.app/"
-        width="100%"
-        height="600px"
-        frameborder="0"
-        allow="microphone">
-      </iframe>
+<section class="chatbot-section">
+  <h2>Chat With Us</h2>
+  <p class="sub">Ask about doctors, services, timings or book an appointment</p>
+
+  <div class="chat-box">
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg bot">
+        <div class="msg-bubble">Hello! Welcome to Iman Hospital. How may I help you?</div>
+      </div>
     </div>
-  </section>
+
+    <div class="chat-input-row">
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Type your question here..."
+        onkeydown="if(event.key==='Enter') sendMessage()"
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+</section>
 
   <footer>
     <div class="footer-grid">
