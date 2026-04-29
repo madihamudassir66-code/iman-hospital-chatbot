@@ -12,9 +12,10 @@ Built with Python, HTML, CSS and JavaScript. Features include:
 
 Click the link below to open the website:
 
-[Visit Iman Hospital Website](https://iman-hospital.netlify.app)
+[Visit Iman Hospital Website] https://imanhospital.netlify.app/
 
 ## Tech Stack
+- Python
 - HTML
 - CSS
 - JavaScript
