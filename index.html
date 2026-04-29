@@ -6,9 +6,7 @@
   <title>Iman Hospital – Quality Healthcare in Hassan</title>
   <style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     * {
       margin: 0;
@@ -17,6 +15,7 @@
       font-family: sans-serif;
     }
 
+    /* ── NAV ── */
     nav {
       background: #1a5c8a;
       padding: 14px 40px;
@@ -35,20 +34,16 @@
       letter-spacing: 0.5px;
     }
 
-    .logo span {
-      color: #7ecfb0;
-    }
+    .logo span { color: #7ecfb0; }
 
     .nav-links a {
       color: #cde8ff;
       text-decoration: none;
-      margin-left: 24px;
+      margin-left: 20px;
       font-size: 14px;
     }
 
-    .nav-links a:hover {
-      color: #ffffff;
-    }
+    .nav-links a:hover { color: #ffffff; }
 
     .nav-btn {
       background: #ffffff;
@@ -57,13 +52,26 @@
       border-radius: 6px;
       font-size: 13px;
       font-weight: 600;
-      margin-left: 24px;
+      margin-left: 20px;
     }
 
-    .nav-btn:hover {
-      background: #e8f4fb !important;
+    .nav-btn:hover { background: #e8f4fb !important; }
+
+    .lang-btn {
+      background: transparent;
+      color: #cde8ff;
+      border: 1px solid #cde8ff;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-left: 10px;
     }
 
+    .lang-btn:hover { background: #144d76; }
+    .lang-btn.active { background: #7ecfb0; color: #0f2d45; border-color: #7ecfb0; }
+
+    /* ── HERO ── */
     .hero {
       background: #e8f4fb;
       padding: 70px 40px;
@@ -80,9 +88,7 @@
       max-width: 480px;
     }
 
-    .hero-text h1 span {
-      color: #1a5c8a;
-    }
+    .hero-text h1 span { color: #1a5c8a; }
 
     .hero-text p {
       color: #4a6070;
@@ -102,15 +108,9 @@
       font-weight: 600;
     }
 
-    .hero-btn:hover {
-      background: #144d76;
-    }
+    .hero-btn:hover { background: #144d76; }
 
-    .hero-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .hero-stats { display: flex; flex-direction: column; gap: 14px; }
 
     .hero-card {
       background: #ffffff;
@@ -127,29 +127,18 @@
       color: #1a5c8a;
     }
 
-    .hero-card p {
-      font-size: 13px;
-      color: #6080a0;
-      margin-top: 4px;
-    }
+    .hero-card p { font-size: 13px; color: #6080a0; margin-top: 4px; }
 
+    /* ── SERVICES ── */
     .services {
       padding: 70px 40px;
       background: #ffffff;
       text-align: center;
     }
 
-    .services h2 {
-      font-size: 28px;
-      color: #0f2d45;
-      margin-bottom: 8px;
-    }
+    .services h2 { font-size: 28px; color: #0f2d45; margin-bottom: 8px; }
 
-    .sub {
-      color: #6080a0;
-      font-size: 15px;
-      margin-bottom: 40px;
-    }
+    .sub { color: #6080a0; font-size: 15px; margin-bottom: 40px; }
 
     .services-grid {
       display: grid;
@@ -166,39 +155,19 @@
       transition: transform 0.2s;
     }
 
-    .s-card:hover {
-      transform: translateY(-4px);
-    }
+    .s-card:hover { transform: translateY(-4px); }
+    .s-icon { font-size: 30px; margin-bottom: 14px; }
+    .s-card h3 { font-size: 15px; color: #0f2d45; font-weight: 600; margin-bottom: 8px; }
+    .s-card p { font-size: 13px; color: #6080a0; line-height: 1.5; }
 
-    .s-icon {
-      font-size: 30px;
-      margin-bottom: 14px;
-    }
-
-    .s-card h3 {
-      font-size: 15px;
-      color: #0f2d45;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .s-card p {
-      font-size: 13px;
-      color: #6080a0;
-      line-height: 1.5;
-    }
-
+    /* ── DOCTORS ── */
     .doctors {
       padding: 70px 40px;
       background: #f0f8ff;
       text-align: center;
     }
 
-    .doctors h2 {
-      font-size: 28px;
-      color: #0f2d45;
-      margin-bottom: 8px;
-    }
+    .doctors h2 { font-size: 28px; color: #0f2d45; margin-bottom: 8px; }
 
     .doctors-grid {
       display: grid;
@@ -215,9 +184,7 @@
       transition: transform 0.2s;
     }
 
-    .doc-card:hover {
-      transform: translateY(-4px);
-    }
+    .doc-card:hover { transform: translateY(-4px); }
 
     .doc-avatar {
       width: 68px;
@@ -233,31 +200,10 @@
       margin: 0 auto 16px;
     }
 
-    .doc-card h3 {
-      font-size: 16px;
-      color: #0f2d45;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .spec {
-      font-size: 13px;
-      color: #1a5c8a;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .doc-timing {
-      font-size: 12px;
-      color: #6080a0;
-      margin-bottom: 4px;
-    }
-
-    .doc-fee {
-      font-size: 12px;
-      color: #6080a0;
-      margin-bottom: 16px;
-    }
+    .doc-card h3 { font-size: 16px; color: #0f2d45; font-weight: 700; margin-bottom: 6px; }
+    .spec { font-size: 13px; color: #1a5c8a; font-weight: 600; margin-bottom: 10px; }
+    .doc-timing { font-size: 12px; color: #6080a0; margin-bottom: 4px; }
+    .doc-fee { font-size: 12px; color: #6080a0; margin-bottom: 16px; }
 
     .doc-btn {
       display: inline-block;
@@ -271,21 +217,16 @@
       cursor: pointer;
     }
 
-    .doc-btn:hover {
-      background: #144d76;
-    }
+    .doc-btn:hover { background: #144d76; }
 
+    /* ── BOOKING ── */
     .booking {
       padding: 70px 40px;
       background: #ffffff;
       text-align: center;
     }
 
-    .booking h2 {
-      font-size: 28px;
-      color: #0f2d45;
-      margin-bottom: 8px;
-    }
+    .booking h2 { font-size: 28px; color: #0f2d45; margin-bottom: 8px; }
 
     .booking-form {
       max-width: 700px;
@@ -304,17 +245,9 @@
       margin-bottom: 20px;
     }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
 
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: #0f2d45;
-    }
+    .form-group label { font-size: 13px; font-weight: 600; color: #0f2d45; }
 
     .form-group input,
     .form-group select {
@@ -328,9 +261,7 @@
     }
 
     .form-group input:focus,
-    .form-group select:focus {
-      border-color: #1a5c8a;
-    }
+    .form-group select:focus { border-color: #1a5c8a; }
 
     .submit-btn {
       background: #1a5c8a;
@@ -345,9 +276,7 @@
       width: 100%;
     }
 
-    .submit-btn:hover {
-      background: #144d76;
-    }
+    .submit-btn:hover { background: #144d76; }
 
     .booking-success {
       display: none;
@@ -374,11 +303,7 @@
       margin: 0 auto 20px;
     }
 
-    .booking-success h3 {
-      font-size: 22px;
-      color: #0f2d45;
-      margin-bottom: 10px;
-    }
+    .booking-success h3 { font-size: 22px; color: #0f2d45; margin-bottom: 10px; }
 
     .booking-success p {
       font-size: 14px;
@@ -387,17 +312,14 @@
       line-height: 1.6;
     }
 
+    /* ── CHATBOT ── */
     .chatbot-section {
       padding: 70px 40px;
       background: #f0f8ff;
       text-align: center;
     }
 
-    .chatbot-section h2 {
-      font-size: 28px;
-      color: #0f2d45;
-      margin-bottom: 8px;
-    }
+    .chatbot-section h2 { font-size: 28px; color: #0f2d45; margin-bottom: 8px; }
 
     .chat-box {
       max-width: 700px;
@@ -418,17 +340,9 @@
       background: #f7fbff;
     }
 
-    .chat-msg {
-      display: flex;
-    }
-
-    .chat-msg.bot {
-      justify-content: flex-start;
-    }
-
-    .chat-msg.user {
-      justify-content: flex-end;
-    }
+    .chat-msg { display: flex; }
+    .chat-msg.bot { justify-content: flex-start; }
+    .chat-msg.user { justify-content: flex-end; }
 
     .msg-bubble {
       max-width: 75%;
@@ -477,10 +391,229 @@
       cursor: pointer;
     }
 
-    .chat-input-row button:hover {
-      background: #144d76;
+    .chat-input-row button:hover { background: #144d76; }
+
+    /* ── LOGIN / REGISTER MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
     }
 
+    .modal-overlay.active { display: flex; }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px;
+      width: 420px;
+      max-width: 95vw;
+      position: relative;
+    }
+
+    .modal-box h2 {
+      font-size: 22px;
+      color: #0f2d45;
+      margin-bottom: 6px;
+    }
+
+    .modal-box p {
+      font-size: 13px;
+      color: #6080a0;
+      margin-bottom: 24px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      font-size: 22px;
+      cursor: pointer;
+      color: #6080a0;
+      background: none;
+      border: none;
+    }
+
+    .modal-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .modal-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f2d45;
+    }
+
+    .modal-group input {
+      padding: 10px 14px;
+      border: 1px solid #d1e8f5;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #0f2d45;
+      outline: none;
+    }
+
+    .modal-group input:focus { border-color: #1a5c8a; }
+
+    .modal-btn {
+      background: #1a5c8a;
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .modal-btn:hover { background: #144d76; }
+
+    .modal-switch {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #6080a0;
+    }
+
+    .modal-switch a {
+      color: #1a5c8a;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .modal-error {
+      color: #c0392b;
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .modal-success-msg {
+      color: #0f6e56;
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    /* ── ADMIN DASHBOARD ── */
+    .admin-section {
+      display: none;
+      padding: 70px 40px;
+      background: #ffffff;
+    }
+
+    .admin-section.active { display: block; }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .admin-header h2 { font-size: 26px; color: #0f2d45; }
+
+    .admin-actions { display: flex; gap: 12px; }
+
+    .admin-btn {
+      background: #1a5c8a;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .admin-btn:hover { background: #144d76; }
+
+    .admin-btn.red {
+      background: #c0392b;
+    }
+
+    .admin-btn.red:hover { background: #a93226; }
+
+    .admin-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .admin-stat {
+      background: #f0f8ff;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid #d1e8f5;
+      text-align: center;
+    }
+
+    .admin-stat .stat-num {
+      font-size: 30px;
+      font-weight: 700;
+      color: #1a5c8a;
+    }
+
+    .admin-stat p { font-size: 13px; color: #6080a0; margin-top: 4px; }
+
+    .admin-table-wrap {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid #d1e8f5;
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .admin-table th {
+      background: #1a5c8a;
+      color: #ffffff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .admin-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8f4fb;
+      color: #0f2d45;
+    }
+
+    .admin-table tr:nth-child(even) td { background: #f7fbff; }
+    .admin-table tr:hover td { background: #e8f4fb; }
+
+    .no-data {
+      text-align: center;
+      padding: 40px;
+      color: #6080a0;
+      font-size: 15px;
+    }
+
+    /* ── ADMIN LOGIN MODAL ── */
+    .admin-login-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px;
+      width: 380px;
+      max-width: 95vw;
+      position: relative;
+    }
+
+    /* ── FOOTER ── */
     footer {
       background: #0f2d45;
       padding: 60px 40px 0;
@@ -501,9 +634,7 @@
       margin-bottom: 12px;
     }
 
-    .footer-logo span {
-      color: #7ecfb0;
-    }
+    .footer-logo span { color: #7ecfb0; }
 
     .footer-col p {
       font-size: 13px;
@@ -525,169 +656,139 @@
       color: #7ca0b8;
       text-decoration: none;
       margin-bottom: 8px;
+      cursor: pointer;
     }
 
-    .footer-col a:hover {
-      color: #cde8ff;
-    }
+    .footer-col a:hover { color: #cde8ff; }
 
     .footer-bottom {
       padding: 20px 0;
       text-align: center;
     }
 
-    .footer-bottom p {
-      font-size: 12px;
-      color: #4a7090;
-    }
+    .footer-bottom p { font-size: 12px; color: #4a7090; }
 
   </style>
 </head>
 <body>
 
+  <!-- ══ NAV ══ -->
   <nav>
     <div class="logo">Iman <span>Hospital</span></div>
     <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#doctors">Doctors</a>
-      <a href="#booking">Book Appointment</a>
-      <a href="#chat">Chat With Us</a>
-      <a href="#booking" class="nav-btn">Book Appointment</a>
+      <a href="#home" data-lang="nav_home">Home</a>
+      <a href="#services" data-lang="nav_services">Services</a>
+      <a href="#doctors" data-lang="nav_doctors">Doctors</a>
+      <a href="#booking" data-lang="nav_book">Book Appointment</a>
+      <a href="#chat" data-lang="nav_chat">Chat With Us</a>
+      <span id="navAuthBtn">
+        <a href="#" onclick="openLogin()" data-lang="nav_login" style="margin-left:20px;">Login</a>
+      </span>
+      <a href="#booking" class="nav-btn" data-lang="nav_book">Book Appointment</a>
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('hi')">HI</button>
+      <button class="lang-btn" onclick="setLang('kn')">ಕನ್ನಡ</button>
     </div>
   </nav>
 
+  <!-- ══ HERO ══ -->
   <section class="hero" id="home">
     <div class="hero-text">
-      <h1>Quality Healthcare <span>You Can Trust</span></h1>
-      <p>Iman Hospital, Hassan – providing compassionate, expert medical care for you and your family.</p>
-      <a href="#booking" class="hero-btn">Book an Appointment</a>
+      <h1 data-lang="hero_title">Quality Healthcare <span>You Can Trust</span></h1>
+      <p data-lang="hero_sub">Iman Hospital, Hassan – providing compassionate, expert medical care for you and your family.</p>
+      <a href="#booking" class="hero-btn" data-lang="hero_btn">Book an Appointment</a>
     </div>
     <div class="hero-stats">
       <div class="hero-card">
         <div class="num">4+</div>
-        <p>Expert Doctors</p>
+        <p data-lang="stat_doctors">Expert Doctors</p>
       </div>
       <div class="hero-card">
         <div class="num">15+</div>
-        <p>Specialised Services</p>
+        <p data-lang="stat_services">Specialised Services</p>
       </div>
       <div class="hero-card">
         <div class="num">10 AM–5 PM</div>
-        <p>OPD Timings</p>
+        <p data-lang="stat_opd">OPD Timings</p>
       </div>
     </div>
   </section>
 
+  <!-- ══ SERVICES ══ -->
   <section class="services" id="services">
-    <h2>Our Services</h2>
-    <p class="sub">Trusted care across a wide range of specialities</p>
+    <h2 data-lang="sec_services">Our Services</h2>
+    <p class="sub" data-lang="sec_services_sub">Trusted care across a wide range of specialities</p>
     <div class="services-grid">
-      <div class="s-card">
-        <div class="s-icon">&#x2665;</div>
-        <h3>General Consultation</h3>
-        <p>Expert advice for all general health concerns</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1F321;</div>
-        <h3>Fever Treatment</h3>
-        <p>Fast diagnosis and treatment for fever</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1FAC1;</div>
-        <h3>Cold &amp; Cough</h3>
-        <p>Effective relief for respiratory symptoms</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x2764;</div>
-        <h3>Blood Pressure</h3>
-        <p>Monitoring and management of BP</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1F489;</div>
-        <h3>Diabetes Care</h3>
-        <p>Ongoing support for diabetes management</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1F9EA;</div>
-        <h3>Lab Tests</h3>
-        <p>Full range of diagnostic lab services</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1F9B4;</div>
-        <h3>Orthopedics</h3>
-        <p>Bone, joint and muscle treatment</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x1F441;</div>
-        <h3>Eye Checkup</h3>
-        <p>Complete vision and eye health screening</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">&#x26A1;</div>
-        <h3>ECG</h3>
-        <p>Heart rhythm and electrical activity test</p>
-      </div>
+      <div class="s-card"><div class="s-icon">&#x2665;</div><h3 data-lang="s1">General Consultation</h3><p data-lang="s1d">Expert advice for all general health concerns</p></div>
+      <div class="s-card"><div class="s-icon">&#x1F321;</div><h3 data-lang="s2">Fever Treatment</h3><p data-lang="s2d">Fast diagnosis and treatment for fever</p></div>
+      <div class="s-card"><div class="s-icon">&#x1FAC1;</div><h3 data-lang="s3">Cold &amp; Cough</h3><p data-lang="s3d">Effective relief for respiratory symptoms</p></div>
+      <div class="s-card"><div class="s-icon">&#x2764;</div><h3 data-lang="s4">Blood Pressure</h3><p data-lang="s4d">Monitoring and management of BP</p></div>
+      <div class="s-card"><div class="s-icon">&#x1F489;</div><h3 data-lang="s5">Diabetes Care</h3><p data-lang="s5d">Ongoing support for diabetes management</p></div>
+      <div class="s-card"><div class="s-icon">&#x1F9EA;</div><h3 data-lang="s6">Lab Tests</h3><p data-lang="s6d">Full range of diagnostic lab services</p></div>
+      <div class="s-card"><div class="s-icon">&#x1F9B4;</div><h3 data-lang="s7">Orthopedics</h3><p data-lang="s7d">Bone, joint and muscle treatment</p></div>
+      <div class="s-card"><div class="s-icon">&#x1F441;</div><h3 data-lang="s8">Eye Checkup</h3><p data-lang="s8d">Complete vision and eye health screening</p></div>
+      <div class="s-card"><div class="s-icon">&#x26A1;</div><h3 data-lang="s9">ECG</h3><p data-lang="s9d">Heart rhythm and electrical activity test</p></div>
     </div>
   </section>
 
+  <!-- ══ DOCTORS ══ -->
   <section class="doctors" id="doctors">
-    <h2>Meet Our Doctors</h2>
-    <p class="sub">Experienced specialists committed to your care</p>
+    <h2 data-lang="sec_doctors">Meet Our Doctors</h2>
+    <p class="sub" data-lang="sec_doctors_sub">Experienced specialists committed to your care</p>
     <div class="doctors-grid">
       <div class="doc-card">
         <div class="doc-avatar">SM</div>
         <h3>Dr. Syed Mudassir</h3>
-        <p class="spec">General Medicine</p>
-        <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
-        <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="doc-btn">Book Appointment</a>
+        <p class="spec" data-lang="doc1spec">General Medicine</p>
+        <p class="doc-timing" data-lang="doc_timing">Mon – Sat, 10 AM – 5 PM</p>
+        <p class="doc-fee" data-lang="doc_fee">Consultation: Rs. 300</p>
+        <a href="#booking" class="doc-btn" data-lang="doc_btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">NF</div>
         <h3>Dr. Nisar Fathima</h3>
-        <p class="spec">Gynaecology</p>
-        <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
-        <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="doc-btn">Book Appointment</a>
+        <p class="spec" data-lang="doc2spec">Gynaecology</p>
+        <p class="doc-timing" data-lang="doc_timing">Mon – Sat, 10 AM – 5 PM</p>
+        <p class="doc-fee" data-lang="doc_fee">Consultation: Rs. 300</p>
+        <a href="#booking" class="doc-btn" data-lang="doc_btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">AK</div>
         <h3>Dr. Ahmed Khan</h3>
-        <p class="spec">Orthopedics</p>
-        <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
-        <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="doc-btn">Book Appointment</a>
+        <p class="spec" data-lang="doc3spec">Orthopedics</p>
+        <p class="doc-timing" data-lang="doc_timing">Mon – Sat, 10 AM – 5 PM</p>
+        <p class="doc-fee" data-lang="doc_fee">Consultation: Rs. 300</p>
+        <a href="#booking" class="doc-btn" data-lang="doc_btn">Book Appointment</a>
       </div>
       <div class="doc-card">
         <div class="doc-avatar">SF</div>
         <h3>Dr. Sana Fatima</h3>
-        <p class="spec">Dermatology</p>
-        <p class="doc-timing">Mon – Sat, 10 AM – 5 PM</p>
-        <p class="doc-fee">Consultation: Rs. 300</p>
-        <a href="#booking" class="doc-btn">Book Appointment</a>
+        <p class="spec" data-lang="doc4spec">Dermatology</p>
+        <p class="doc-timing" data-lang="doc_timing">Mon – Sat, 10 AM – 5 PM</p>
+        <p class="doc-fee" data-lang="doc_fee">Consultation: Rs. 300</p>
+        <a href="#booking" class="doc-btn" data-lang="doc_btn">Book Appointment</a>
       </div>
     </div>
   </section>
 
+  <!-- ══ BOOKING ══ -->
   <section class="booking" id="booking">
-    <h2>Book an Appointment</h2>
-    <p class="sub">Fill in the form below and we will confirm your appointment</p>
-
+    <h2 data-lang="sec_book">Book an Appointment</h2>
+    <p class="sub" data-lang="sec_book_sub">Fill in the form below and we will confirm your appointment</p>
     <div class="booking-form" id="bookingForm">
       <div class="form-row">
         <div class="form-group">
-          <label>Patient Name</label>
+          <label data-lang="f_name">Patient Name</label>
           <input type="text" id="patientName" placeholder="Enter your full name" />
         </div>
         <div class="form-group">
-          <label>Age</label>
+          <label data-lang="f_age">Age</label>
           <input type="number" id="patientAge" placeholder="Your age" min="1" max="120" />
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Choose Doctor</label>
+          <label data-lang="f_doctor">Choose Doctor</label>
           <select id="doctor">
             <option value="">Select a doctor</option>
             <option value="Dr. Syed Mudassir">Dr. Syed Mudassir – General Medicine</option>
@@ -697,7 +798,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Choose Service</label>
+          <label data-lang="f_service">Choose Service</label>
           <select id="service">
             <option value="">Select a service</option>
             <option value="General Consultation">General Consultation</option>
@@ -716,70 +817,116 @@
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Preferred Date</label>
+          <label data-lang="f_date">Preferred Date</label>
           <input type="date" id="apptDate" />
         </div>
         <div class="form-group">
-          <label>Preferred Time</label>
+          <label data-lang="f_time">Preferred Time</label>
           <input type="time" id="apptTime" min="10:00" max="17:00" />
         </div>
       </div>
-      <button class="submit-btn" id="confirmBtn">Confirm Appointment</button>
+      <button class="submit-btn" id="confirmBtn" data-lang="f_confirm">Confirm Appointment</button>
     </div>
-
     <div class="booking-success" id="bookingSuccess">
       <div class="success-icon">&#x2713;</div>
-      <h3>Appointment Confirmed!</h3>
+      <h3 data-lang="book_confirmed">Appointment Confirmed!</h3>
       <p id="successMessage"></p>
-      <button class="submit-btn" id="resetBtn">Book Another Appointment</button>
+      <button class="submit-btn" id="resetBtn" data-lang="book_another">Book Another Appointment</button>
     </div>
-
   </section>
 
+  <!-- ══ CHATBOT ══ -->
   <section class="chatbot-section" id="chat">
-    <h2>Chat With Us</h2>
-    <p class="sub">Ask about doctors, services, timings or book an appointment</p>
+    <h2 data-lang="sec_chat">Chat With Us</h2>
+    <p class="sub" data-lang="sec_chat_sub">Ask about doctors, services, timings or book an appointment</p>
     <div class="chat-box">
       <div class="chat-messages" id="chatMessages">
         <div class="chat-msg bot">
-          <div class="msg-bubble">Hello! Welcome to Iman Hospital. How may I help you today?</div>
+          <div class="msg-bubble" id="chatWelcome">Hello! Welcome to Iman Hospital. How may I help you today?</div>
         </div>
       </div>
       <div class="chat-input-row">
         <input type="text" id="chatInput" placeholder="Type your question here..." />
-        <button id="sendBtn">Send</button>
+        <button id="sendBtn" data-lang="chat_send">Send</button>
       </div>
     </div>
   </section>
 
-  <footer>
+  <!-- ══ ADMIN DASHBOARD ══ -->
+  <section class="admin-section" id="adminSection">
+    <div class="admin-header">
+      <h2>&#x1F4CB; Admin Dashboard – Iman Hospital</h2>
+      <div class="admin-actions">
+        <button class="admin-btn" onclick="downloadCSV()">&#x2B07; Download CSV</button>
+        <button class="admin-btn red" onclick="clearAppointments()">&#x1F5D1; Clear All</button>
+        <button class="admin-btn" onclick="logoutAdmin()">Logout</button>
+      </div>
+    </div>
+    <div class="admin-stats">
+      <div class="admin-stat">
+        <div class="stat-num" id="statTotal">0</div>
+        <p>Total Appointments</p>
+      </div>
+      <div class="admin-stat">
+        <div class="stat-num" id="statToday">0</div>
+        <p>Today's Appointments</p>
+      </div>
+      <div class="admin-stat">
+        <div class="stat-num" id="statPatients">0</div>
+        <p>Registered Patients</p>
+      </div>
+    </div>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="adminTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Doctor</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Booked On</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody">
+          <tr><td colspan="8" class="no-data">No appointments yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="mainFooter">
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-logo">Iman <span>Hospital</span></div>
-        <p>Providing compassionate, quality healthcare to Hassan and surrounding areas.</p>
+        <p data-lang="footer_about">Providing compassionate, quality healthcare to Hassan and surrounding areas.</p>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#doctors">Doctors</a>
-        <a href="#booking">Book Appointment</a>
-        <a href="#chat">Chat With Us</a>
+        <h4 data-lang="footer_links">Quick Links</h4>
+        <a href="#home" data-lang="nav_home">Home</a>
+        <a href="#services" data-lang="nav_services">Services</a>
+        <a href="#doctors" data-lang="nav_doctors">Doctors</a>
+        <a href="#booking" data-lang="nav_book">Book Appointment</a>
+        <a href="#chat" data-lang="nav_chat">Chat With Us</a>
       </div>
       <div class="footer-col">
-        <h4>Our Services</h4>
-        <a href="#services">General Consultation</a>
-        <a href="#services">Diabetes Care</a>
-        <a href="#services">Blood Pressure</a>
-        <a href="#services">Lab Tests</a>
-        <a href="#services">ECG</a>
+        <h4 data-lang="footer_services">Our Services</h4>
+        <a href="#services" data-lang="s1">General Consultation</a>
+        <a href="#services" data-lang="s5">Diabetes Care</a>
+        <a href="#services" data-lang="s4">Blood Pressure</a>
+        <a href="#services" data-lang="s6">Lab Tests</a>
+        <a href="#services" data-lang="s9">ECG</a>
       </div>
       <div class="footer-col">
-        <h4>Contact Us</h4>
+        <h4 data-lang="footer_contact">Contact Us</h4>
         <p>Hassan, Karnataka, India</p>
-        <p>OPD: 10 AM – 5 PM</p>
-        <p>Mon – Saturday</p>
-        <p>Consultation: Rs. 300</p>
+        <p data-lang="footer_opd">OPD: 10 AM – 5 PM</p>
+        <p data-lang="footer_days">Mon – Saturday</p>
+        <p data-lang="footer_fee">Consultation: Rs. 300</p>
+        <a href="#" onclick="openAdminLogin()" style="margin-top:10px; color:#4a7090;">&#x1F512; Admin Login</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -787,9 +934,459 @@
     </div>
   </footer>
 
+  <!-- ══ PATIENT LOGIN MODAL ══ -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeLogin()">&#x2715;</button>
+      <div id="loginView">
+        <h2>&#x1F464; Patient Login</h2>
+        <p>Login to manage your appointments</p>
+        <div class="modal-error" id="loginError">Invalid email or password.</div>
+        <div class="modal-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" />
+        </div>
+        <div class="modal-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" />
+        </div>
+        <button class="modal-btn" id="loginSubmitBtn">Login</button>
+        <div class="modal-switch">Don't have an account? <a onclick="showRegister()">Register here</a></div>
+      </div>
+      <div id="registerView" style="display:none;">
+        <h2>&#x1F464; Patient Register</h2>
+        <p>Create your account to get started</p>
+        <div class="modal-error" id="registerError">Email already registered.</div>
+        <div class="modal-success-msg" id="registerSuccess">Account created! You can now login.</div>
+        <div class="modal-group">
+          <label>Full Name</label>
+          <input type="text" id="regName" placeholder="Enter your full name" />
+        </div>
+        <div class="modal-group">
+          <label>Email</label>
+          <input type="email" id="regEmail" placeholder="Enter your email" />
+        </div>
+        <div class="modal-group">
+          <label>Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" />
+        </div>
+        <button class="modal-btn" id="registerSubmitBtn">Register</button>
+        <div class="modal-switch">Already have an account? <a onclick="showLogin()">Login here</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ADMIN LOGIN MODAL ══ -->
+  <div class="modal-overlay" id="adminLoginModal">
+    <div class="modal-box admin-login-box">
+      <button class="modal-close" onclick="closeAdminLogin()">&#x2715;</button>
+      <h2>&#x1F512; Admin Login</h2>
+      <p>Enter admin credentials to continue</p>
+      <div class="modal-error" id="adminLoginError">Incorrect password. Try again.</div>
+      <div class="modal-group">
+        <label>Admin Password</label>
+        <input type="password" id="adminPassword" placeholder="Enter admin password" />
+      </div>
+      <button class="modal-btn" id="adminLoginBtn">Login as Admin</button>
+    </div>
+  </div>
+
   <script>
 
-    // ── CHATBOT ──────────────────────────────────────────
+    // ══════════════════════════════════════════
+    // LANGUAGE SYSTEM
+    // ══════════════════════════════════════════
+
+    var translations = {
+      en: {
+        nav_home: "Home", nav_services: "Services", nav_doctors: "Doctors",
+        nav_book: "Book Appointment", nav_chat: "Chat With Us", nav_login: "Login",
+        hero_title: "Quality Healthcare <span>You Can Trust</span>",
+        hero_sub: "Iman Hospital, Hassan – providing compassionate, expert medical care for you and your family.",
+        hero_btn: "Book an Appointment",
+        stat_doctors: "Expert Doctors", stat_services: "Specialised Services", stat_opd: "OPD Timings",
+        sec_services: "Our Services", sec_services_sub: "Trusted care across a wide range of specialities",
+        s1: "General Consultation", s1d: "Expert advice for all general health concerns",
+        s2: "Fever Treatment", s2d: "Fast diagnosis and treatment for fever",
+        s3: "Cold & Cough", s3d: "Effective relief for respiratory symptoms",
+        s4: "Blood Pressure", s4d: "Monitoring and management of BP",
+        s5: "Diabetes Care", s5d: "Ongoing support for diabetes management",
+        s6: "Lab Tests", s6d: "Full range of diagnostic lab services",
+        s7: "Orthopedics", s7d: "Bone, joint and muscle treatment",
+        s8: "Eye Checkup", s8d: "Complete vision and eye health screening",
+        s9: "ECG", s9d: "Heart rhythm and electrical activity test",
+        sec_doctors: "Meet Our Doctors", sec_doctors_sub: "Experienced specialists committed to your care",
+        doc1spec: "General Medicine", doc2spec: "Gynaecology", doc3spec: "Orthopedics", doc4spec: "Dermatology",
+        doc_timing: "Mon – Sat, 10 AM – 5 PM", doc_fee: "Consultation: Rs. 300", doc_btn: "Book Appointment",
+        sec_book: "Book an Appointment", sec_book_sub: "Fill in the form below and we will confirm your appointment",
+        f_name: "Patient Name", f_age: "Age", f_doctor: "Choose Doctor", f_service: "Choose Service",
+        f_date: "Preferred Date", f_time: "Preferred Time", f_confirm: "Confirm Appointment",
+        book_confirmed: "Appointment Confirmed!", book_another: "Book Another Appointment",
+        sec_chat: "Chat With Us", sec_chat_sub: "Ask about doctors, services, timings or book an appointment",
+        chat_send: "Send",
+        footer_about: "Providing compassionate, quality healthcare to Hassan and surrounding areas.",
+        footer_links: "Quick Links", footer_services: "Our Services", footer_contact: "Contact Us",
+        footer_opd: "OPD: 10 AM – 5 PM", footer_days: "Mon – Saturday", footer_fee: "Consultation: Rs. 300"
+      },
+      hi: {
+        nav_home: "होम", nav_services: "सेवाएं", nav_doctors: "डॉक्टर",
+        nav_book: "अपॉइंटमेंट बुक करें", nav_chat: "हमसे चैट करें", nav_login: "लॉगिन",
+        hero_title: "विश्वसनीय <span>स्वास्थ्य सेवा</span>",
+        hero_sub: "इमान हॉस्पिटल, हासन – आपके और आपके परिवार के लिए सर्वोत्तम चिकित्सा सेवा।",
+        hero_btn: "अपॉइंटमेंट बुक करें",
+        stat_doctors: "विशेषज्ञ डॉक्टर", stat_services: "विशेष सेवाएं", stat_opd: "OPD समय",
+        sec_services: "हमारी सेवाएं", sec_services_sub: "विभिन्न विशेषताओं में विश्वसनीय देखभाल",
+        s1: "सामान्य परामर्श", s1d: "सभी सामान्य स्वास्थ्य समस्याओं के लिए सलाह",
+        s2: "बुखार उपचार", s2d: "बुखार का त्वरित निदान और उपचार",
+        s3: "सर्दी और खांसी", s3d: "श्वसन लक्षणों से प्रभावी राहत",
+        s4: "रक्तचाप", s4d: "रक्तचाप की निगरानी और प्रबंधन",
+        s5: "मधुमेह देखभाल", s5d: "मधुमेह प्रबंधन के लिए निरंतर सहायता",
+        s6: "लैब टेस्ट", s6d: "नैदानिक लैब सेवाओं की पूरी श्रृंखला",
+        s7: "हड्डी रोग", s7d: "हड्डी, जोड़ और मांसपेशियों का उपचार",
+        s8: "आंखों की जांच", s8d: "पूर्ण दृष्टि और नेत्र स्वास्थ्य जांच",
+        s9: "ECG", s9d: "हृदय ताल और विद्युत गतिविधि परीक्षण",
+        sec_doctors: "हमारे डॉक्टरों से मिलें", sec_doctors_sub: "आपकी देखभाल के लिए समर्पित अनुभवी विशेषज्ञ",
+        doc1spec: "सामान्य चिकित्सा", doc2spec: "स्त्री रोग", doc3spec: "हड्डी रोग", doc4spec: "त्वचा रोग",
+        doc_timing: "सोम – शनि, सुबह 10 – शाम 5", doc_fee: "परामर्श: Rs. 300", doc_btn: "अपॉइंटमेंट बुक करें",
+        sec_book: "अपॉइंटमेंट बुक करें", sec_book_sub: "नीचे फॉर्म भरें और हम आपकी अपॉइंटमेंट की पुष्टि करेंगे",
+        f_name: "मरीज का नाम", f_age: "उम्र", f_doctor: "डॉक्टर चुनें", f_service: "सेवा चुनें",
+        f_date: "पसंदीदा तारीख", f_time: "पसंदीदा समय", f_confirm: "अपॉइंटमेंट की पुष्टि करें",
+        book_confirmed: "अपॉइंटमेंट की पुष्टि हो गई!", book_another: "एक और अपॉइंटमेंट बुक करें",
+        sec_chat: "हमसे चैट करें", sec_chat_sub: "डॉक्टर, सेवाएं, समय या अपॉइंटमेंट के बारे में पूछें",
+        chat_send: "भेजें",
+        footer_about: "हासन और आसपास के क्षेत्रों में गुणवत्तापूर्ण स्वास्थ्य सेवा प्रदान करना।",
+        footer_links: "त्वरित लिंक", footer_services: "हमारी सेवाएं", footer_contact: "संपर्क करें",
+        footer_opd: "OPD: सुबह 10 – शाम 5", footer_days: "सोमवार – शनिवार", footer_fee: "परामर्श: Rs. 300"
+      },
+      kn: {
+        nav_home: "ಮುಖಪುಟ", nav_services: "ಸೇವೆಗಳು", nav_doctors: "ವೈದ್ಯರು",
+        nav_book: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ", nav_chat: "ನಮ್ಮೊಂದಿಗೆ ಚಾಟ್ ಮಾಡಿ", nav_login: "ಲಾಗಿನ್",
+        hero_title: "ನಂಬಲರ್ಹ <span>ಆರೋಗ್ಯ ಸೇವೆ</span>",
+        hero_sub: "ಇಮಾನ್ ಆಸ್ಪತ್ರೆ, ಹಾಸನ – ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ ಕುಟುಂಬಕ್ಕೆ ಅತ್ಯುತ್ತಮ ವೈದ್ಯಕೀಯ ಆರೈಕೆ.",
+        hero_btn: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
+        stat_doctors: "ತಜ್ಞ ವೈದ್ಯರು", stat_services: "ವಿಶೇಷ ಸೇವೆಗಳು", stat_opd: "OPD ಸಮಯ",
+        sec_services: "ನಮ್ಮ ಸೇವೆಗಳು", sec_services_sub: "ವಿವಿಧ ವಿಶೇಷತೆಗಳಲ್ಲಿ ವಿಶ್ವಾಸಾರ್ಹ ಆರೈಕೆ",
+        s1: "ಸಾಮಾನ್ಯ ಸಮಾಲೋಚನೆ", s1d: "ಎಲ್ಲಾ ಸಾಮಾನ್ಯ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳಿಗೆ ತಜ್ಞ ಸಲಹೆ",
+        s2: "ಜ್ವರ ಚಿಕಿತ್ಸೆ", s2d: "ಜ್ವರಕ್ಕೆ ತ್ವರಿತ ರೋಗನಿರ್ಣಯ ಮತ್ತು ಚಿಕಿತ್ಸೆ",
+        s3: "ಶೀತ ಮತ್ತು ಕೆಮ್ಮು", s3d: "ಉಸಿರಾಟದ ರೋಗಲಕ್ಷಣಗಳಿಗೆ ಪರಿಣಾಮಕಾರಿ ಪರಿಹಾರ",
+        s4: "ರಕ್ತದೊತ್ತಡ", s4d: "BP ಮೇಲ್ವಿಚಾರಣೆ ಮತ್ತು ನಿರ್ವಹಣೆ",
+        s5: "ಮಧುಮೇಹ ಆರೈಕೆ", s5d: "ಮಧುಮೇಹ ನಿರ್ವಹಣೆಗೆ ನಿರಂತರ ಬೆಂಬಲ",
+        s6: "ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆಗಳು", s6d: "ರೋಗನಿರ್ಣಯ ಲ್ಯಾಬ್ ಸೇವೆಗಳ ಸಂಪೂರ್ಣ ಶ್ರೇಣಿ",
+        s7: "ಮೂಳೆ ಚಿಕಿತ್ಸೆ", s7d: "ಮೂಳೆ, ಕೀಲು ಮತ್ತು ಸ್ನಾಯು ಚಿಕಿತ್ಸೆ",
+        s8: "ಕಣ್ಣಿನ ತಪಾಸಣೆ", s8d: "ಸಂಪೂರ್ಣ ದೃಷ್ಟಿ ಮತ್ತು ಕಣ್ಣಿನ ಆರೋಗ್ಯ ತಪಾಸಣೆ",
+        s9: "ECG", s9d: "ಹೃದಯ ಲಯ ಮತ್ತು ವಿದ್ಯುತ್ ಚಟುವಟಿಕೆ ಪರೀಕ್ಷೆ",
+        sec_doctors: "ನಮ್ಮ ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ", sec_doctors_sub: "ನಿಮ್ಮ ಆರೈಕೆಗೆ ಸಮರ್ಪಿತ ಅನುಭವಿ ತಜ್ಞರು",
+        doc1spec: "ಸಾಮಾನ್ಯ ವೈದ್ಯಕೀಯ", doc2spec: "ಸ್ತ್ರೀರೋಗ", doc3spec: "ಮೂಳೆ ರೋಗ", doc4spec: "ಚರ್ಮ ರೋಗ",
+        doc_timing: "ಸೋಮ – ಶನಿ, ಬೆಳಿಗ್ಗೆ 10 – ಸಂಜೆ 5", doc_fee: "ಸಮಾಲೋಚನೆ: Rs. 300", doc_btn: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
+        sec_book: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ", sec_book_sub: "ಕೆಳಗಿನ ಫಾರ್ಮ್ ತುಂಬಿ, ನಾವು ದೃಢಪಡಿಸುತ್ತೇವೆ",
+        f_name: "ರೋಗಿಯ ಹೆಸರು", f_age: "ವಯಸ್ಸು", f_doctor: "ವೈದ್ಯರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ", f_service: "ಸೇವೆ ಆಯ್ಕೆ ಮಾಡಿ",
+        f_date: "ಆದ್ಯತೆಯ ದಿನಾಂಕ", f_time: "ಆದ್ಯತೆಯ ಸಮಯ", f_confirm: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ದೃಢಪಡಿಸಿ",
+        book_confirmed: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ದೃಢಪಡಿಸಲಾಗಿದೆ!", book_another: "ಇನ್ನೊಂದು ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
+        sec_chat: "ನಮ್ಮೊಂದಿಗೆ ಚಾಟ್ ಮಾಡಿ", sec_chat_sub: "ವೈದ್ಯರು, ಸೇವೆಗಳು, ಸಮಯ ಅಥವಾ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬಗ್ಗೆ ಕೇಳಿ",
+        chat_send: "ಕಳುಹಿಸಿ",
+        footer_about: "ಹಾಸನ ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳಿಗೆ ಗುಣಮಟ್ಟದ ಆರೋಗ್ಯ ಸೇವೆ.",
+        footer_links: "ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು", footer_services: "ನಮ್ಮ ಸೇವೆಗಳು", footer_contact: "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+        footer_opd: "OPD: ಬೆಳಿಗ್ಗೆ 10 – ಸಂಜೆ 5", footer_days: "ಸೋಮವಾರ – ಶನಿವಾರ", footer_fee: "ಸಮಾಲೋಚನೆ: Rs. 300"
+      }
+    };
+
+    var currentLang = "en";
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      var t = translations[lang];
+      document.querySelectorAll("[data-lang]").forEach(function(el) {
+        var key = el.getAttribute("data-lang");
+        if (t[key] !== undefined) {
+          el.innerHTML = t[key];
+        }
+      });
+    }
+
+    // ══════════════════════════════════════════
+    // PATIENT AUTH
+    // ══════════════════════════════════════════
+
+    function getPatients() {
+      return JSON.parse(localStorage.getItem("iman_patients") || "[]");
+    }
+
+    function savePatients(patients) {
+      localStorage.setItem("iman_patients", JSON.stringify(patients));
+    }
+
+    function getCurrentUser() {
+      return JSON.parse(localStorage.getItem("iman_current_user") || "null");
+    }
+
+    function openLogin() {
+      document.getElementById("loginModal").classList.add("active");
+      document.getElementById("loginError").style.display = "none";
+      document.getElementById("loginEmail").value = "";
+      document.getElementById("loginPassword").value = "";
+    }
+
+    function closeLogin() {
+      document.getElementById("loginModal").classList.remove("active");
+    }
+
+    function showRegister() {
+      document.getElementById("loginView").style.display = "none";
+      document.getElementById("registerView").style.display = "block";
+      document.getElementById("registerError").style.display = "none";
+      document.getElementById("registerSuccess").style.display = "none";
+    }
+
+    function showLogin() {
+      document.getElementById("registerView").style.display = "none";
+      document.getElementById("loginView").style.display = "block";
+    }
+
+    function updateNavAuth() {
+      var user = getCurrentUser();
+      var btn = document.getElementById("navAuthBtn");
+      if (user) {
+        btn.innerHTML = '<span style="color:#7ecfb0; margin-left:20px; font-size:14px;">&#x1F464; ' + user.name + '</span> <a href="#" onclick="logoutPatient()" style="margin-left:10px; color:#cde8ff; font-size:13px;">Logout</a>';
+        document.getElementById("patientName").value = user.name;
+      } else {
+        btn.innerHTML = '<a href="#" onclick="openLogin()" data-lang="nav_login" style="margin-left:20px;">Login</a>';
+      }
+    }
+
+    function logoutPatient() {
+      localStorage.removeItem("iman_current_user");
+      updateNavAuth();
+    }
+
+    document.getElementById("loginSubmitBtn").addEventListener("click", function() {
+      var email = document.getElementById("loginEmail").value.trim();
+      var password = document.getElementById("loginPassword").value.trim();
+      var patients = getPatients();
+      var found = patients.find(function(p) { return p.email === email && p.password === password; });
+      if (!found) {
+        document.getElementById("loginError").style.display = "block";
+        return;
+      }
+      localStorage.setItem("iman_current_user", JSON.stringify(found));
+      closeLogin();
+      updateNavAuth();
+    });
+
+    document.getElementById("registerSubmitBtn").addEventListener("click", function() {
+      var name = document.getElementById("regName").value.trim();
+      var email = document.getElementById("regEmail").value.trim();
+      var password = document.getElementById("regPassword").value.trim();
+      document.getElementById("registerError").style.display = "none";
+      document.getElementById("registerSuccess").style.display = "none";
+      if (!name || !email || !password) {
+        document.getElementById("registerError").innerText = "Please fill in all fields.";
+        document.getElementById("registerError").style.display = "block";
+        return;
+      }
+      var patients = getPatients();
+      var exists = patients.find(function(p) { return p.email === email; });
+      if (exists) {
+        document.getElementById("registerError").innerText = "Email already registered.";
+        document.getElementById("registerError").style.display = "block";
+        return;
+      }
+      patients.push({ name: name, email: email, password: password });
+      savePatients(patients);
+      document.getElementById("registerSuccess").style.display = "block";
+      document.getElementById("regName").value = "";
+      document.getElementById("regEmail").value = "";
+      document.getElementById("regPassword").value = "";
+    });
+
+    // ══════════════════════════════════════════
+    // APPOINTMENTS STORAGE
+    // ══════════════════════════════════════════
+
+    function getAppointments() {
+      return JSON.parse(localStorage.getItem("iman_appointments") || "[]");
+    }
+
+    function saveAppointments(appts) {
+      localStorage.setItem("iman_appointments", JSON.stringify(appts));
+    }
+
+    // ══════════════════════════════════════════
+    // BOOKING FORM
+    // ══════════════════════════════════════════
+
+    document.getElementById("confirmBtn").addEventListener("click", function() {
+      var name = document.getElementById("patientName").value.trim();
+      var age = document.getElementById("patientAge").value.trim();
+      var doctor = document.getElementById("doctor").value;
+      var service = document.getElementById("service").value;
+      var date = document.getElementById("apptDate").value;
+      var time = document.getElementById("apptTime").value;
+
+      if (!name || !age || !doctor || !service || !date || !time) {
+        alert("Please fill in all fields before confirming your appointment.");
+        return;
+      }
+
+      var dateObj = new Date(date + "T00:00:00");
+      var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+      var formattedDate = dateObj.toLocaleDateString("en-IN", options);
+      var timeParts = time.split(":");
+      var hours = parseInt(timeParts[0]);
+      var minutes = timeParts[1];
+      var ampm = hours >= 12 ? "PM" : "AM";
+      var displayHour = hours % 12 || 12;
+      var formattedTime = displayHour + ":" + minutes + " " + ampm;
+
+      var appt = {
+        name: name,
+        age: age,
+        doctor: doctor,
+        service: service,
+        date: date,
+        time: formattedTime,
+        bookedOn: new Date().toLocaleString("en-IN")
+      };
+
+      var appts = getAppointments();
+      appts.push(appt);
+      saveAppointments(appts);
+
+      document.getElementById("successMessage").innerHTML =
+        "Thank you, <strong>" + name + "</strong>! Your appointment has been confirmed.<br><br>" +
+        "<strong>Doctor:</strong> " + doctor + "<br>" +
+        "<strong>Service:</strong> " + service + "<br>" +
+        "<strong>Date:</strong> " + formattedDate + "<br>" +
+        "<strong>Time:</strong> " + formattedTime + "<br><br>" +
+        "Please arrive 10 minutes early. We look forward to seeing you!";
+
+      document.getElementById("bookingForm").style.display = "none";
+      document.getElementById("bookingSuccess").style.display = "block";
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", function() {
+      document.getElementById("patientName").value = "";
+      document.getElementById("patientAge").value = "";
+      document.getElementById("doctor").value = "";
+      document.getElementById("service").value = "";
+      document.getElementById("apptDate").value = "";
+      document.getElementById("apptTime").value = "";
+      document.getElementById("bookingForm").style.display = "block";
+      document.getElementById("bookingSuccess").style.display = "none";
+    });
+
+    // ══════════════════════════════════════════
+    // ADMIN
+    // ══════════════════════════════════════════
+
+    var ADMIN_PASSWORD = "iman2025";
+
+    function openAdminLogin() {
+      document.getElementById("adminLoginModal").classList.add("active");
+      document.getElementById("adminLoginError").style.display = "none";
+      document.getElementById("adminPassword").value = "";
+    }
+
+    function closeAdminLogin() {
+      document.getElementById("adminLoginModal").classList.remove("active");
+    }
+
+    document.getElementById("adminLoginBtn").addEventListener("click", function() {
+      var pwd = document.getElementById("adminPassword").value.trim();
+      if (pwd !== ADMIN_PASSWORD) {
+        document.getElementById("adminLoginError").style.display = "block";
+        return;
+      }
+      closeAdminLogin();
+      showAdminDashboard();
+    });
+
+    function showAdminDashboard() {
+      document.getElementById("adminSection").classList.add("active");
+      document.getElementById("adminSection").scrollIntoView({ behavior: "smooth" });
+      loadAdminTable();
+    }
+
+    function logoutAdmin() {
+      document.getElementById("adminSection").classList.remove("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function loadAdminTable() {
+      var appts = getAppointments();
+      var patients = getPatients();
+      var tbody = document.getElementById("adminTableBody");
+      var today = new Date().toISOString().split("T")[0];
+
+      var todayCount = appts.filter(function(a) { return a.date === today; }).length;
+
+      document.getElementById("statTotal").textContent = appts.length;
+      document.getElementById("statToday").textContent = todayCount;
+      document.getElementById("statPatients").textContent = patients.length;
+
+      if (appts.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="no-data">No appointments yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = "";
+      appts.forEach(function(a, i) {
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" + (i + 1) + "</td>" +
+          "<td>" + a.name + "</td>" +
+          "<td>" + a.age + "</td>" +
+          "<td>" + a.doctor + "</td>" +
+          "<td>" + a.service + "</td>" +
+          "<td>" + a.date + "</td>" +
+          "<td>" + a.time + "</td>" +
+          "<td>" + a.bookedOn + "</td>";
+        tbody.appendChild(tr);
+      });
+    }
+
+    function downloadCSV() {
+      var appts = getAppointments();
+      if (appts.length === 0) {
+        alert("No appointments to download.");
+        return;
+      }
+      var headers = ["#", "Patient Name", "Age", "Doctor", "Service", "Date", "Time", "Booked On"];
+      var rows = appts.map(function(a, i) {
+        return [
+          i + 1,
+          '"' + a.name + '"',
+          a.age,
+          '"' + a.doctor + '"',
+          '"' + a.service + '"',
+          a.date,
+          a.time,
+          '"' + a.bookedOn + '"'
+        ].join(",");
+      });
+      var csvContent = [headers.join(",")].concat(rows).join("\n");
+      var blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      var url = URL.createObjectURL(blob);
+      var link = document.createElement("a");
+      link.href = url;
+      link.download = "iman_hospital_appointments.csv";
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function clearAppointments() {
+      if (confirm("Are you sure you want to delete ALL appointments? This cannot be undone.")) {
+        localStorage.removeItem("iman_appointments");
+        loadAdminTable();
+      }
+    }
+
+    // ══════════════════════════════════════════
+    // CHATBOT
+    // ══════════════════════════════════════════
 
     function getResponse(question) {
       var q = question.toLowerCase().trim();
@@ -855,71 +1452,25 @@
       if (question === "") return;
       addMessage(question, "user");
       input.value = "";
-      setTimeout(function () {
+      setTimeout(function() {
         addMessage(getResponse(question), "bot");
       }, 400);
     }
 
-    document.getElementById("sendBtn").addEventListener("click", function () {
+    document.getElementById("sendBtn").addEventListener("click", function() {
       sendMessage();
     });
 
-    document.getElementById("chatInput").addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        sendMessage();
-      }
+    document.getElementById("chatInput").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") sendMessage();
     });
 
-    // ── BOOKING ──────────────────────────────────────────
+    // ══════════════════════════════════════════
+    // INIT
+    // ══════════════════════════════════════════
 
-    document.getElementById("confirmBtn").addEventListener("click", function () {
-      var name = document.getElementById("patientName").value.trim();
-      var age = document.getElementById("patientAge").value.trim();
-      var doctor = document.getElementById("doctor").value;
-      var service = document.getElementById("service").value;
-      var date = document.getElementById("apptDate").value;
-      var time = document.getElementById("apptTime").value;
-
-      if (!name || !age || !doctor || !service || !date || !time) {
-        alert("Please fill in all fields before confirming your appointment.");
-        return;
-      }
-
-      var dateObj = new Date(date + "T00:00:00");
-      var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
-      var formattedDate = dateObj.toLocaleDateString("en-IN", options);
-
-      var timeParts = time.split(":");
-      var hours = parseInt(timeParts[0]);
-      var minutes = timeParts[1];
-      var ampm = hours >= 12 ? "PM" : "AM";
-      var displayHour = hours % 12 || 12;
-      var formattedTime = displayHour + ":" + minutes + " " + ampm;
-
-      document.getElementById("successMessage").innerHTML =
-        "Thank you, <strong>" + name + "</strong>! Your appointment has been confirmed.<br><br>" +
-        "<strong>Doctor:</strong> " + doctor + "<br>" +
-        "<strong>Service:</strong> " + service + "<br>" +
-        "<strong>Date:</strong> " + formattedDate + "<br>" +
-        "<strong>Time:</strong> " + formattedTime + "<br><br>" +
-        "Please arrive 10 minutes early. We look forward to seeing you!";
-
-      document.getElementById("bookingForm").style.display = "none";
-      document.getElementById("bookingSuccess").style.display = "block";
-    });
-
-    document.getElementById("resetBtn").addEventListener("click", function () {
-      document.getElementById("patientName").value = "";
-      document.getElementById("patientAge").value = "";
-      document.getElementById("doctor").value = "";
-      document.getElementById("service").value = "";
-      document.getElementById("apptDate").value = "";
-      document.getElementById("apptTime").value = "";
-      document.getElementById("bookingForm").style.display = "block";
-      document.getElementById("bookingSuccess").style.display = "none";
-    });
+    updateNavAuth();
 
   </script>
-
 </body>
 </html>
